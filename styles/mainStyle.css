@@ -25,7 +25,8 @@ h2 {
 }
 
 p,
-li {
+li,
+button {
     font-family: "Alata", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -59,11 +60,19 @@ body {
 button {
     border: none;
     border-radius: 5px;
-    padding: 2%;
+    padding: 10px;
     background-image: linear-gradient(90deg, #FF4B2B 0%, #FF416C 100%);
     color: #EDEDD4;
+
+    font-size: 1.2em;
 }
 
+.divider {
+
+    color: #1E0D0C;
+    background-color: #1E0D0C;
+
+}
 
 header {
 
@@ -91,7 +100,7 @@ header {
 main {
     background-color: #EDEDD4;
     color: #1E0D0C;
-    padding: 15%;
+    padding: 10%;
 
     a {
         background-image: linear-gradient(90deg, #FF4B2B 0%, #FF416C 100%);
@@ -116,6 +125,27 @@ main {
             }
         }
     }
+
+    img {
+        border-radius: 5px;
+        width: 100%;
+    }
+
+    .imageContainer {
+        width: 25vw;
+        height: 25vw;
+        overflow: hidden;
+    }
+
+    .indexContentContainer {
+        padding: 5%;
+        display: flex;
+        justify-content: center;
+
+        .textContainer {
+            width: 50%;
+        }
+    }
 }
 
 footer {
@@ -129,13 +159,13 @@ footer {
         opacity: 80%;
     }
 
-    .socialLinks{
+    .socialLinks {
         padding: 1%;
         display: flex;
         align-items: center;
         justify-content: center;
 
-        img{
+        img {
             width: 40px;
             height: 40px;
             padding: 10px;
