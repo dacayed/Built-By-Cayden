@@ -111,7 +111,7 @@ main {
 
     ul {
         padding: 10px;
-        list-style-type: disc;
+        list-style-type:none;
         list-style-position: inside;
 
         li {
@@ -127,30 +127,41 @@ main {
     }
 
     img {
-        border-radius: 5px;
+        /* border-radius: 5px; */
         width: 100%;
     }
 
     .imageContainer {
-        width: 25vw;
-        height: 25vw;
+        width: 35vw;
+        height: 35vw;
         overflow: hidden;
+        border: 4px;
+        border-color:#245417;
+        border-style: double;
     }
 
     .indexContentContainer {
-        padding: 5%;
-        display: flex;
-        justify-content: center;
+        display: grid;
+        grid-template-columns: 0.5fr 1fr;
+        gap: 5%;
 
         .textContainer {
             width: 50%;
+
+            ul{
+                padding-top: 5%;
+                padding-bottom: 10%;
+            }
+
+            p{
+                padding-top: 5%;
+            }
         }
     }
 }
 
 footer {
     text-align: center;
-    padding-top: 5%;
     color: #27D515;
 
     .email {
