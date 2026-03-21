@@ -92,17 +92,15 @@ header {
         color: #27D515;
     }
 
-    /* .subtitle{
-        background-image: linear-gradient(90deg, #245417 0%, #27D515 100%);
-    } */
 }
 
 main {
     background-color: #EDEDD4;
     color: #1E0D0C;
-    padding: 10%;
+    padding: 5%;
 
-    a {
+    a,
+    span {
         background-image: linear-gradient(90deg, #FF4B2B 0%, #FF416C 100%);
         text-decoration: none;
         color: #1E0D0C;
@@ -111,7 +109,7 @@ main {
 
     ul {
         padding: 10px;
-        list-style-type:none;
+        list-style-type: none;
         list-style-position: inside;
 
         li {
@@ -126,35 +124,44 @@ main {
         }
     }
 
-    img {
-        /* border-radius: 5px; */
-        width: 100%;
-    }
 
-    .imageContainer {
-        width: 35vw;
-        height: 35vw;
-        overflow: hidden;
-        border: 4px;
-        border-color:#245417;
-        border-style: double;
-    }
+    .contentContainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
 
-    .indexContentContainer {
-        display: grid;
-        grid-template-columns: 0.5fr 1fr;
-        gap: 5%;
+        .card {
+            height: 350px;
+            margin: 10px;
+            /* box-shadow: 5px 5px 10px #1E0D0C; */
+            overflow: hidden;
+            border-radius: 3px;
+            position: relative;
+        }
+
+        .projectImg {
+            height: 350px;
+            width: 300px;
+            border-radius: 3px;
+            object-fit: cover;
+        }
 
         .textContainer {
-            width: 50%;
+            width: 300px;
+            padding: 15px;
+            box-sizing: border-box;
+            position: absolute;
+            bottom: 0;
+            background: #1e0d0ca4;
+            color: #EDEDD4;
 
-            ul{
-                padding-top: 5%;
-                padding-bottom: 10%;
+            h3 {
+                padding-bottom: 15px;
             }
 
-            p{
-                padding-top: 5%;
+            span{
+                padding-left: 4px;
+                padding-right: 4px;
             }
         }
     }
