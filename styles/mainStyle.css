@@ -24,6 +24,7 @@ h2 {
     font-size: 3em;
 }
 
+
 p,
 li,
 button {
@@ -107,7 +108,7 @@ main {
     }
 
 
-    ul {
+    /* ul {
         padding: 10px;
         list-style-type: none;
         list-style-position: inside;
@@ -122,21 +123,55 @@ main {
                 padding-left: 25px;
             }
         }
+    } */
+
+
+    .MainTitle{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding-bottom: 20px;
+
+        a{
+            opacity: 80%;
+        }
+        a:hover{
+            opacity: 100%;
+        }
     }
 
 
     .contentContainer {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-evenly;
+        justify-content: center;
 
         .card {
             height: 350px;
             margin: 10px;
-            /* box-shadow: 5px 5px 10px #1E0D0C; */
             overflow: hidden;
             border-radius: 3px;
             position: relative;
+            /* transition: 0.5s; */
+        }
+
+        .card:hover{
+            cursor: pointer;
+            box-shadow: 2px 10px 20px #1E0D0C;
+            transition: 0.5s;
+
+            .textContainer{
+                height: auto;
+            }
+
+            p{
+                visibility:visible;
+                opacity: 100;
+            }
+
+            .projectImg{
+                /* should make the size of the image match its resolution */
+            }
         }
 
         .projectImg {
@@ -148,20 +183,34 @@ main {
 
         .textContainer {
             width: 300px;
+            height: 55px;
             padding: 15px;
             box-sizing: border-box;
             position: absolute;
             bottom: 0;
             background: #1e0d0ca4;
             color: #EDEDD4;
-
+            transition: 0.5s;
             h3 {
                 padding-bottom: 15px;
+            }
+
+            p{
+                visibility: collapse;
+                opacity: 0;
+                transition: 0.5s;
             }
 
             span{
                 padding-left: 4px;
                 padding-right: 4px;
+            }
+
+            a{
+                opacity: 60%;
+            }
+            a:hover{
+                opacity: 100%;
             }
         }
     }
@@ -172,13 +221,13 @@ footer {
     color: #27D515;
 
     .email {
-        padding-top: 1%;
-        padding-bottom: 1%;
+        /* padding-top: 1%; */
+        padding-bottom: 10px;
         opacity: 80%;
     }
 
     .socialLinks {
-        padding: 1%;
+        margin: 5px;
         display: flex;
         align-items: center;
         justify-content: center;
