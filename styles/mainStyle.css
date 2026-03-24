@@ -201,16 +201,14 @@ main {
                 transition: 0.5s;
             }
 
-            span{
-                padding-left: 4px;
-                padding-right: 4px;
-            }
-
             a{
                 opacity: 60%;
             }
             a:hover{
                 opacity: 100%;
+            }
+            .playButton{
+                padding-top: 10px;
             }
         }
     }
