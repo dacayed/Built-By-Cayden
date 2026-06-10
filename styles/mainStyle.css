@@ -152,16 +152,19 @@ main {
             overflow: hidden;
             border-radius: 3px;
             position: relative;
-            /* transition: 0.5s; */
+        }
+
+        .card.expanded {
+            height: 400px;
         }
 
         .card:hover{
             cursor: pointer;
             box-shadow: 2px 10px 20px #1E0D0C;
             transition: 0.5s;
-
             .textContainer{
                 height: auto;
+                width: 100%;
             }
 
             p{
@@ -169,9 +172,6 @@ main {
                 opacity: 100;
             }
 
-            .projectImg{
-                /* should make the size of the image match its resolution */
-            }
         }
 
         .projectImg {
