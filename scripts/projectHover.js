@@ -4,10 +4,12 @@ card.forEach(card => {
     const media = card.querySelector('.projectImg');
     const normalimgWidth = media.style.width;
     const normalimgHeight = media.style.height;
+    const textContainer = card.querySelector('.textContainer');
+    const normaltextHeight = textContainer.style.height;
+    const originalcardzindex = card.style.zIndex;
 
         card.addEventListener('mouseover', () => {
             let width, height;
-            const textContainer = card.querySelector('.textContainer');
 
             if(media.tagName === 'VIDEO'){
                 width = media.videoWidth;
@@ -19,15 +21,19 @@ card.forEach(card => {
             }
 
             const aspectRatio = width / height;
-            width = 500 * aspectRatio;
-            height = 500;
+            width = 375 * aspectRatio;
+            height = 375;
 
-            const textheight = textContainer.offsetHeight;
+            textheight = textContainer.querySelector('h3').offsetHeight + textContainer.querySelector('p').offsetHeight + 20;
 
             card.style.width = width + 'px';
             card.style.height = height + textheight + 'px';
             media.style.width = width + 'px';
             media.style.height = height + 'px';
+
+            textContainer.style.height = textheight + 'px';
+
+            card.style.zIndex = '999';
         });
         card.addEventListener('mouseout', () => {
 
@@ -35,5 +41,9 @@ card.forEach(card => {
             card.style.height = normalimgHeight;
             media.style.width = normalimgWidth;
             media.style.height = normalimgHeight;
+
+            textContainer.style.height = normaltextHeight;
+            
+            card.style.zIndex = originalcardzindex;
         });
 });
